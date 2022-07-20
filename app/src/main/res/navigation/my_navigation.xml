@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="developer.abdulahad.mymusic.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_musicFragment"
+            app:destination="@id/musicFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_likedFragment"
+            app:destination="@id/likedFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_artistFragment"
+            app:destination="@id/artistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/musicFragment"
+        android:name="developer.abdulahad.mymusic.MusicFragment"
+        android:label="fragment_music"
+        tools:layout="@layout/fragment_music" />
+    <fragment
+        android:id="@+id/likedFragment"
+        android:name="developer.abdulahad.mymusic.LikedFragment"
+        android:label="fragment_liked"
+        tools:layout="@layout/fragment_liked" />
+    <fragment
+        android:id="@+id/artistFragment"
+        android:name="developer.abdulahad.mymusic.ArtistFragment"
+        android:label="fragment_artist"
+        tools:layout="@layout/fragment_artist" />
+</navigation>
